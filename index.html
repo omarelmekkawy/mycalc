@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="online calculator" content="A simple and powerful online calculator.">
+    <title>MyCalc - The Best Online Calculator!</title>
+    <link rel="stylesheet" href="./assets/assets/style.css">
+    <script defer src="./script.js"></script>
+</head>
+<body>
+
+    <!-- Info Bar -->
+    <div class="info-bar">
+        <p>Welcome to <strong>MyCalc</strong> - The best calculator ever! 🎉</p>
+    </div>
+
+    <!-- Container for everything -->
+    <div class="container">
+        
+        <!-- Sign-In Form -->
+        <form class="form">
+            <h2>Sign In</h2>
+            <label for="name-input">Enter your name:</label>
+            <input type="text" id="name-input" class="namebox" placeholder="Type your name here...">
+            <div class="error-message"></div>
+            <button class="button" type="submit">Submit</button>
+        </form>
+        <!-- Welcome Message -->
+        <div class="resultbox"></div>
+
+        <!-- Calculator -->
+        <div class="calc">
+            <h2>Calculator</h2>
+            <input type="text" id="calc-display" readonly>
+            <div class="buttons">
+                <button onclick="appendNumber('1')">1</button>
+                <button onclick="appendNumber('2')">2</button>
+                <button onclick="appendNumber('3')">3</button>
+                <button onclick="appendOperator('+')">+</button>
+
+                <button onclick="appendNumber('4')">4</button>
+                <button onclick="appendNumber('5')">5</button>
+                <button onclick="appendNumber('6')">6</button>
+                <button onclick="appendOperator('-')">-</button>
+
+                <button onclick="appendNumber('7')">7</button>
+                <button onclick="appendNumber('8')">8</button>
+                <button onclick="appendNumber('9')">9</button>
+                <button onclick="appendOperator('*')">*</button>
+
+                <button onclick="clearDisplay()">C</button>
+                <button onclick="appendNumber('0')">0</button>
+                <button onclick="calculateResult()">=</button>
+                <button onclick="appendOperator('/')">/</button>
+            </div>
+        </div>
+    </div>
+<br>
+    <!-- Footer -->
+    <footer class="footer">
+        &copy; 2025 <strong>MyCalc</strong> | Designed with ❤️ by <span class="author">Omar 😊</span>
+    </footer>
+</body>
+</html>
